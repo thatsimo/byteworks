@@ -41,7 +41,7 @@ export default function ProjectsPage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Link href="/" className="flex items-center space-x-2">
-                <img src="/logo.svg" alt="Byteworks Logo" className="w-12 h-12" />
+                <img src="/byteworks/logo.svg" alt="Byteworks Logo" className="w-12 h-12" />
                 <span className="text-2xl font-bold tracking-tight">BYTEWORKS</span>
               </Link>
             </div>
@@ -370,7 +370,7 @@ export default function ProjectsPage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <img src="/logo.svg" alt="Byteworks Logo" className="w-8 h-8" />
+              <img src="/byteworks/logo.svg" alt="Byteworks Logo" className="w-8 h-8" />
               <span className="font-bold">BYTEWORKS</span>
             </div>
             <div className="text-sm">© 2024 BYTEWORKS. ALL RIGHTS RESERVED.</div>

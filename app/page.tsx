@@ -3,7 +3,6 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 import { Button } from "@/components/ui/button"
-import PongGame from "@/components/pong-game"
 import DinoGame from "@/components/dino-game"
 
 export const metadata: Metadata = {
@@ -96,7 +95,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <img src="/logo.svg" alt="Byteworks Logo" className="w-12 h-12" />
+              <img src="/byteworks/logo.svg" alt="Byteworks Logo" className="w-12 h-12" />
               <h1 className="text-2xl font-bold tracking-tight">BYTEWORKS</h1>
             </div>
             <nav className="hidden md:flex space-x-8" role="navigation" aria-label="Main navigation">
@@ -473,7 +472,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <img src="/logo.svg" alt="Byteworks Logo" className="w-8 h-8" />
+              <img src="/byteworks/logo.svg" alt="Byteworks Logo" className="w-8 h-8" />
               <span className="font-bold">BYTEWORKS</span>
             </div>
             <div className="text-sm">© 2024 BYTEWORKS. ALL RIGHTS RESERVED.</div>
