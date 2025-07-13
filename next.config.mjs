@@ -1,6 +1,6 @@
 const isGhPages = process.env.DEPLOY_TARGET === 'gh-pages';
 const isProd = process.env.NODE_ENV === 'production';
-const repo = 'ss-portfolio';
+const repo = 'byteworks';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
