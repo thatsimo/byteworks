@@ -127,12 +127,12 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="max-w-4xl">
-              <h2 className="text-6xl md:text-8xl font-bold mb-8 leading-none">
+              <h2 className="text-5xl md:text-8xl font-bold mb-8 leading-none">
                 ENTERPRISE
                 <br />
                 <span className="bg-black text-white px-4">SOLUTIONS</span>
               </h2>
-              <p className="text-xl md:text-2xl mb-12 max-w-2xl">
+              <p className="text-lg md:text-2xl mb-12 max-w-2xl">
                 {">"} Cloud-native solutions that scale
                 <br />
                 {">"} Microservices architecture experts
@@ -164,7 +164,7 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-            <div className="flex justify-center lg:justify-end">
+            <div className="justify-center lg:justify-end hidden lg:flex">
               <ByteGame />
             </div>
           </div>

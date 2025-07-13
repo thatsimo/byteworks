@@ -2,7 +2,6 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 import { Button } from "@/components/ui/button"
-import ByteGame from "@/components/byte-game"
 import PongGame from "@/components/pong-game"
 
 export const metadata: Metadata = {
@@ -64,15 +63,13 @@ export default function ProjectsPage() {
                 <br />
                 <span className="bg-black text-white px-4">PORTFOLIO</span>
               </h1>
-              <p className="text-xl mb-8 max-w-3xl">
+              <p className="text-lg md:text-xl mb-8 max-w-3xl">
                 {">"} Real-world solutions built with modern technologies and best practices.
                 <br />
                 {">"} From healthcare platforms to fintech systems and security infrastructure.
-                <br />
-                {">"} Play the T-Rex game while you explore our projects!
               </p>
             </div>
-            <div className="flex justify-center lg:justify-end">
+            <div className="justify-center lg:justify-end hidden lg:flex">
               <PongGame />
             </div>
           </div>
