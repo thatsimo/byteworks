@@ -116,12 +116,12 @@ export default function RootLayout({
         <link rel="canonical" href="https://thatsimo.github.io/byteworks" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#000000" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/byteworks/favicon.ico" sizes="any" />
+        <link rel="icon" href="/byteworks/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/byteworks/apple-touch-icon.png" />
+        <link rel="manifest" href="/byteworks/manifest.json" />
         <meta name="msapplication-TileColor" content="#000000" />
-        <meta name="msapplication-config" content="/browserconfig.xml" />
+        <meta name="msapplication-config" content="/byteworks/browserconfig.xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://calendar.google.com" />
