@@ -1,0 +1,27 @@
+{
+  "name": "Byteworks - Enterprise Cloud-Native Software Solutions",
+  "short_name": "Byteworks",
+  "description": "Enterprise software development company specializing in microservices architecture and event-driven systems",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "developer"],
+  "lang": "en",
+  "dir": "ltr"
+}
