@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import { Dialog, DialogClose, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "./ui/dialog"
 import { Button } from "./ui/button"
 
-export default function DinoGame() {
+export default function ByteGame() {
     const canvasRef = useRef<HTMLCanvasElement>(null)
     const animationRef = useRef<number | null>(null)
     const [isPlaying, setIsPlaying] = useState(false)
@@ -22,7 +22,7 @@ export default function DinoGame() {
 
         // Game state
         const game = {
-            dino: {
+            byte: {
                 x: 50,
                 y: 150,
                 width: 20,
@@ -69,7 +69,7 @@ export default function DinoGame() {
             }
             if (e.code === 'ArrowDown') {
                 keys.down = false
-                game.dino.ducking = false
+                game.byte.ducking = false
             }
         }
 
@@ -89,10 +89,10 @@ export default function DinoGame() {
         canvas.addEventListener('click', handleCanvasClick)
 
         const resetGame = () => {
-            game.dino.y = 150
-            game.dino.velocityY = 0
-            game.dino.onGround = true
-            game.dino.ducking = false
+            game.byte.y = 150
+            game.byte.velocityY = 0
+            game.byte.onGround = true
+            game.byte.ducking = false
             game.obstacles = []
             game.clouds = []
             game.gameSpeed = 2
@@ -143,7 +143,7 @@ export default function DinoGame() {
 
         const generateDiscountCode = (score: number) => {
             const codes = [
-                "DINO50", "BYTE25", "JUMP30", "SPEED40", "EPIC60",
+                "BYTE50", "BYTE25", "JUMP30", "SPEED40", "EPIC60",
                 "RUNNER35", "FAST45", "HERO55", "LEGEND70"
             ]
             return codes[Math.floor(score / 1000) % codes.length] || "MASTER100"
@@ -188,41 +188,41 @@ export default function DinoGame() {
                 spawnCloud()
             }
 
-            // Dino physics
-            if (keys.space && game.dino.onGround && !game.dino.ducking) {
-                game.dino.velocityY = -8
-                game.dino.onGround = false
+            // Byte physics
+            if (keys.space && game.byte.onGround && !game.byte.ducking) {
+                game.byte.velocityY = -8
+                game.byte.onGround = false
             }
 
-            if (keys.down && game.dino.onGround) {
-                game.dino.ducking = true
+            if (keys.down && game.byte.onGround) {
+                game.byte.ducking = true
             }
 
             // Apply gravity
-            if (!game.dino.onGround) {
-                game.dino.velocityY += 0.4
-                game.dino.y += game.dino.velocityY
+            if (!game.byte.onGround) {
+                game.byte.velocityY += 0.4
+                game.byte.y += game.byte.velocityY
 
-                if (game.dino.y >= 150) {
-                    game.dino.y = 150
-                    game.dino.onGround = true
-                    game.dino.velocityY = 0
+                if (game.byte.y >= 150) {
+                    game.byte.y = 150
+                    game.byte.onGround = true
+                    game.byte.velocityY = 0
                 }
             }
 
-            // Draw dino
+            // Draw byte
             ctx.fillStyle = "black"
-            if (game.dino.ducking) {
-                ctx.fillRect(game.dino.x, game.dino.y + 10, game.dino.width + 5, game.dino.height - 10)
+            if (game.byte.ducking) {
+                ctx.fillRect(game.byte.x, game.byte.y + 10, game.byte.width + 5, game.byte.height - 10)
             } else {
-                ctx.fillRect(game.dino.x, game.dino.y, game.dino.width, game.dino.height)
+                ctx.fillRect(game.byte.x, game.byte.y, game.byte.width, game.byte.height)
                 // Simple legs animation
-                if (game.dino.onGround && game.frame % 20 < 10) {
-                    ctx.fillRect(game.dino.x + 5, game.dino.y + 20, 3, 8)
-                    ctx.fillRect(game.dino.x + 12, game.dino.y + 20, 3, 8)
-                } else if (game.dino.onGround) {
-                    ctx.fillRect(game.dino.x + 3, game.dino.y + 20, 3, 8)
-                    ctx.fillRect(game.dino.x + 14, game.dino.y + 20, 3, 8)
+                if (game.byte.onGround && game.frame % 20 < 10) {
+                    ctx.fillRect(game.byte.x + 5, game.byte.y + 20, 3, 8)
+                    ctx.fillRect(game.byte.x + 12, game.byte.y + 20, 3, 8)
+                } else if (game.byte.onGround) {
+                    ctx.fillRect(game.byte.x + 3, game.byte.y + 20, 3, 8)
+                    ctx.fillRect(game.byte.x + 14, game.byte.y + 20, 3, 8)
                 }
             }
 
@@ -260,14 +260,14 @@ export default function DinoGame() {
                 }
 
                 // Collision detection
-                const dinoHitbox = {
-                    x: game.dino.x + 2,
-                    y: game.dino.ducking ? game.dino.y + 10 : game.dino.y,
-                    width: game.dino.ducking ? game.dino.width + 3 : game.dino.width - 4,
-                    height: game.dino.ducking ? game.dino.height - 10 : game.dino.height - 2
+                const byteHitbox = {
+                    x: game.byte.x + 2,
+                    y: game.byte.ducking ? game.byte.y + 10 : game.byte.y,
+                    width: game.byte.ducking ? game.byte.width + 3 : game.byte.width - 4,
+                    height: game.byte.ducking ? game.byte.height - 10 : game.byte.height - 2
                 }
 
-                if (checkCollision(dinoHitbox, obstacle)) {
+                if (checkCollision(byteHitbox, obstacle)) {
                     game.gameOver = true
                     setIsPlaying(false)
 
@@ -308,8 +308,8 @@ export default function DinoGame() {
             ctx.fillStyle = "black"
             ctx.fillRect(0, 190, canvas.width, 2)
 
-            // Draw dino
-            ctx.fillRect(game.dino.x, game.dino.y, game.dino.width, game.dino.height)
+            // Draw byte
+            ctx.fillRect(game.byte.x, game.byte.y, game.byte.width, game.byte.height)
 
             // Instructions
             ctx.font = "14px monospace"
@@ -355,7 +355,7 @@ export default function DinoGame() {
                 <div className="p-4 text-center border-t-4 border-black">
                     <div className="text-sm font-bold mb-2">BYTE.EXE</div>
                     <div className="text-xs">
-                        {isPlaying ? "SPACE TO JUMP • ↓ TO DUCK • BEAT 500 FOR DISCOUNT!" : "CLICK TO START DINO GAME"}
+                        {isPlaying ? "SPACE TO JUMP • ↓ TO DUCK • BEAT 500 FOR DISCOUNT!" : "CLICK TO START BYTE GAME"}
                     </div>
                     {highScore > 0 && (
                         <div className="text-xs mt-1 text-gray-600">

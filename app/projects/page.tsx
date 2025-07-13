@@ -2,7 +2,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 import { Button } from "@/components/ui/button"
-import DinoGame from "@/components/dino-game"
+import ByteGame from "@/components/byte-game"
 import PongGame from "@/components/pong-game"
 
 export const metadata: Metadata = {

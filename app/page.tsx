@@ -3,7 +3,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 import { Button } from "@/components/ui/button"
-import DinoGame from "@/components/dino-game"
+import ByteGame from "@/components/byte-game"
 
 export const metadata: Metadata = {
   title: "Byteworks - Enterprise Cloud-Native Software Solutions | Microservices & Event-Driven Architecture",
@@ -165,7 +165,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <DinoGame />
+              <ByteGame />
             </div>
           </div>
         </div>
